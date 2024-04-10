@@ -30,7 +30,7 @@ jobs:
           labels=""
           for file in ${ALL_CHANGED_FILES}; do
             if [ "$(dirname ${file})" = "." ]; then
-              label="root"
+              label="[root]"
             else
               label="${file%%/*}"
             fi
