@@ -47,5 +47,7 @@ jobs:
           echo -e "$labels"
           echo "============"
           echo -e "${labels}" | sort -u | while read label ; do
-            echo "LABEL: [${label}]"
+            if [ ! -z "${label}" ]; then
+              echo "LABEL: [${label}]"
+            fi
           done
