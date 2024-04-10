@@ -31,7 +31,7 @@ jobs:
             if [ "$(dirname ${file})" = "." ]; then
               label="root"
             else
-              label=$(dirname ${file})
+              label="${file%%/*}"
             fi
             echo "[${file}] is changed dir:[$(dirname ${file})] label:${label}"
           done
