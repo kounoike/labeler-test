@@ -50,6 +50,6 @@ jobs:
           echo -e "${labels}" | sort -u | while read label ; do
             if [ ! -z "${label}" ]; then
               echo "LABEL: [${label}]"
-              gh pr edit "${PR_NUMBER}" --add-labell "${label}"
+              gh pr edit "${PR_NUMBER}" --add-label "${label}"
             fi
           done
