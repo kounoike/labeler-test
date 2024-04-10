@@ -44,8 +44,8 @@ jobs:
             labels="${labels}${label}\n"
           done
           echo "===LABELS==="
-          echo $labels
+          echo -e "$labels"
           echo "============"
-          echo $labels | sort -u | while read ; do
+          echo -e "${labels}" | sort -u | while read ; do
             echo "LABEL: [${label}]"
           done
