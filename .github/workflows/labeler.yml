@@ -28,5 +28,10 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
-            echo "[${file}] is changed dir:[$(dirname ${file})]"
+            if [ "$(dirname ${file} = "." ]; then
+              label="root"
+            else
+              label=$(dirname)
+            fi
+            echo "[${file}] is changed dir:[$(dirname ${file})] label:${label}"
           done
